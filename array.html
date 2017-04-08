@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <script>
+        var libraryLetter = ["book", "car", "bank", "near", "between", "map", "dog"];
+        
+        var userLetter = prompt("Укажите слово");
+
+        function inArray(arr, str) {
+            return arr.filter(function(item) {
+                return item.indexOf(str) !== -1
+            })
+        }
+
+        var words = inArray(libraryLetter, userLetter)
+
+        if (words.length > 0) {
+            console.log(words)
+        } else {
+            console.log('Совпадений не найдено')
+        }
+
+    </script>
+</body>
+
+</html>
